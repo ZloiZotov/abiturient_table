@@ -2,7 +2,7 @@
 
 var table = {
     table1: {
-        sz_b: 1, sz_b_copy: 2, sz_c: 3, sz_c_copy: 4,
+        sz_b: 1, sz_b_copy: 1, sz_c: 1, sz_c_copy: 4,
         u_sz_b: 5, u_sz_b_copy: 6,
                                 sz_b_11: 7, sz_b_11_copy: 8,
         sm_b: 9, sm_b_copy: 10,

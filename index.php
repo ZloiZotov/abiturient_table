@@ -42,48 +42,7 @@
 </head>
 
 <body>
-
-
-    <table border="1">
-
-
-    </table>
-
-
-
-    <div class='news-text box'>
-        <p>Приёмная комиссия начала приём документов у поступающих с 01 июня 2021 г. Режим работы: ежедневно с понедельника по пятницу с 08.30 до 16.30, по субботам с 08.30 до 12.00. Воскресенье – выходной день.</p>
-
-        <div class="main-li"><a href="/sites/default/files/abiturient/number_documents_for_abiturient.pdf"><i class="fas fa-file-pdf"></i>&nbsp;Перечень документов, для поступления на 1 курс ГАПОУ СО «СКСМГС»</a></div>
-        <p>Уважаемые абитуриенты – 2021!</p>
-
-        <p>ГАПОУ СО «Саратовский колледж строительства мостов и гидротехнических сооружений» предлагает вам поступить на перспективные и востребованные на рынках труда Саратовской области и Российской Федерации специальности:
-        <ul>
-            <li><a href="https://abiturient.sksmgs.ru/sz.html">
-                    08.02.01 «Строительство и эксплуатация зданий и сооружений»</a></li>
-            <li><a href="https://abiturient.sksmgs.ru/er.html">
-                    23.02.04 «Техническая эксплуатация подъёмно-транспортных, строительных, дорожных машин и оборудования»
-                </a>
-            </li>
-            <li><a href="https://abiturient.sksmgs.ru/sm.html">
-                    08.02.02 «Строительство и эксплуатация инженерных сооружений»
-                </a></li>
-            <li><a href="https://abiturient.sksmgs.ru/sp.html">
-                    35.02.12 «Садово-парковое и ландшафтное строительство»
-                </a></li>
-            <li><a href="https://abiturient.sksmgs.ru/zo.html">
-                    21.02.05 «Земельно-имущественные отношения»
-                </a></li>
-            <li><a href="https://abiturient.sksmgs.ru/economy.html">
-                    38.02.01 «Экономика и бухгалтерский учёт»
-                </a></li>
-        </ul>
-        </p>
         <!-- ================== table =================== -->
-
-
-
-
         <div class="spoiler">
             <ul>
                 <div class="spoiler"><label for="check1"><a class="main-li">&nbsp;<h3>Количество поданных заявлений
@@ -177,10 +136,9 @@
                                             </p>
                                         </td>
                                     </tr>
-
-
                                     <?php
                                     $connect = mysqli_connect('127.0.0.1', 'root', 'root', 'abiturient_table'); 
+                                
 
                                     if (!$connect)
                                         die("ERROR!!!");
@@ -235,7 +193,6 @@
                                         </tr>
                                     <?php
                                     }
-                                    print_r($first);
                                     ?>
 
                                     <tr>
@@ -278,11 +235,7 @@
                 </div>
             </ul>
         </div>
-
         <hr>
-
-
-
         <div class="spoiler">
             <ul>
                 <div class="spoiler"><label for="check2"><a class="main-li">&nbsp;<h3>Количество поданных заявлений
@@ -461,23 +414,6 @@
                 </div>
             </ul>
         </div>
-
         <hr>
-
         <br>
-
-
-
-
         <!-- ================== /table ===================-->
-
-
-        <br>
-    </div>
-    <div id="vk_post_-196747666_96"></div>
-    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
-    <script type="text/javascript">
-        (function() {
-            VK.Widgets.Post("vk_post_-196747666_96", -196747666, 96, '5_z6kGvLO_OG1HJgKAYfXswbhEaj');
-        }());
-    </script>

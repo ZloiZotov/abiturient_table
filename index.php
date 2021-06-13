@@ -181,7 +181,7 @@
 
 
 <?php
-$connect = mysqli_connect('127.0.0.1', 'root', '', 'abiturient_table'); 
+$connect = mysqli_connect('127.0.0.1', 'root', 'root', 'abiturient_table'); 
 
 if(!$connect) 
 die ("ERROR!!!");
@@ -190,10 +190,16 @@ if (!mysqli_set_charset($connect, "utf8mb4")) {
     exit();
 } 
 
-
 $values = mysqli_query($connect, "SELECT * FROM `table_och`");
 $values = mysqli_fetch_all($values);
 foreach ($values as $value) {
+    
+    $digit_priem_budget += $value[5];
+    $budget_orig += $value[6];
+    $budget_copy += $value[7];
+    $digit_priem_commerce += $value[8];
+    $commerce_orig += $value[9];
+    $commerce_copy += $value[10];
     ?>
     
     <tr> 
@@ -208,12 +214,23 @@ foreach ($values as $value) {
         <td><p><strong class="value"><?= $value[9] ?></strong></p></td>
         <td><p><strong class="value"><?= $value[10] ?></strong></p></td>
     </tr>
-    
     <?php
     }
+    print_r($first);
     ?>
-
-       
+    
+    <tr> 
+        <td><p><strong></strong></p></td>
+        <td><p>Итого</p></td>
+        <td><p><strong></strong></p></td>
+        <td><p><strong></strong></p></td>
+        <td><p><strong><?= $digit_priem_budget?></strong></p></td>
+        <td><p><strong class="value"><?= $budget_orig ?></strong></p></td>
+        <td><p><strong class="value"><?= $budget_copy ?></strong></p></td>
+        <td><p><strong><?= $digit_priem_commerce?></strong></p></td>
+        <td><p><strong class="value"><?= $commerce_orig?></strong></p></td>
+        <td><p><strong class="value"><?= $commerce_copy?> </strong></p></td>
+    </tr>
 
                     </tbody>
                 </table>
@@ -325,6 +342,12 @@ foreach ($values as $value) {
                             $values = mysqli_query($connect, "SELECT * FROM `table_zaoch`");
                             $values = mysqli_fetch_all($values);
                             foreach ($values as $value) {
+                                $z_digit_priem_budget += $value[5];
+                                $z_budget_orig += $value[6];
+                                $z_budget_copy += $value[7];
+                                $z_digit_priem_commerce += $value[8];
+                                $z_commerce_orig += $value[9];
+                                $z_commerce_copy += $value[10];
                                 ?>
                                 
                                 <tr> 
@@ -342,7 +365,18 @@ foreach ($values as $value) {
                                 <?php
                                 }
                                 ?>
-                            
+                              <tr> 
+        <td><p><strong></strong></p></td>
+        <td><p>Итого</p></td>
+        <td><p><strong></strong></p></td>
+        <td><p><strong></strong></p></td>
+        <td><p><strong><?= $z_digit_priem_budget?></strong></p></td>
+        <td><p><strong class="value"><?= $z_budget_orig ?></strong></p></td>
+        <td><p><strong class="value"><?= $z_budget_copy ?></strong></p></td>
+        <td><p><strong><?= $z_digit_priem_commerce?></strong></p></td>
+        <td><p><strong class="value"><?= $z_commerce_orig?></strong></p></td>
+        <td><p><strong class="value"><?= $z_commerce_copy?> </strong></p></td>
+    </tr>
                         </tbody>
                     </table>
                 </ul>
